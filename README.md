@@ -1,42 +1,36 @@
 # hottertimesahead-R
-#Climate Changes Analysis: Studying Temperature Trends
-This Git repository contains the code and data for an analysis of temperature trends as part of a climate change study.
+# Climate Changes Analysis: Studying Temperature Trends
 
-#Table of Contents
-Overview
-Data Source
-Operations
+Welcome to the **Climate Changes Analysis** repository! This project focuses on analyzing temperature trends to gain insights into climate change. Here, you'll find the code and data for the analysis, along with instructions on how to perform various operations.
+
+## Table of Contents
+
+- [Overview](#overview)
+- [Data Source](#data-source)
+- [Operations](#operations)
+- [Getting Started](#getting-started)
+- [Contributing](#contributing)
+- [License](#license)
+
+## Overview
+
+This project explores temperature data to understand climate change better. It includes various data analysis and visualization operations to uncover temperature trends over time.
+
+## Data Source
+
+The temperature data used for this analysis is sourced from the provided CSV file: [Indian Summers - Over the years-2007-11.csv](/data/Indian%20Summers%20-%20Over%20the%20years-2007-11.csv).
+
+Getting Started
+Clone this repository to your local machine.
+
+Load the dataset from Indian Summers - Over the years-2007-11.csv into your preferred data analysis environment.
+
+Execute the provided code snippets for the desired operations.
+
 Contributing
-License
-Overview
-This project focuses on analyzing temperature data to gain insights into climate change. It includes various data analysis and visualization operations to understand temperature trends over time.
-
-#Data Source
-The temperature data used for this analysis is sourced from the provided CSV file: Indian Summers - Over the years-2007-11.csv.
-
-#Operations
-1. Display All Data from CSV
-To display all the data from the CSV file, you can use your preferred data analysis tool or programming language.
-
-2. Check for Null Values
-You can perform data validation operations to check if there are any null values in the dataset.
-
-3. Count Null Values
-Calculate the number of null values in the dataset to identify missing data points.
-
-4. Calculate the Mean of 'feelslikemax' for Each 'City'
-To understand how 'feelslikemax' varies across different cities, calculate the mean value for this variable for each city. Sort the results in descending order and reset the index if needed.
-
-5. Calculate the Mean of 'tempmax' for Each 'City'
-Similarly, calculate the mean of 'tempmax' for each city to analyze temperature trends across different regions. Sort the results in descending order and reset the index as necessary.
-
-6. Create Bar Plots with a Built-in Color Palette
-Use data visualization tools to create bar plots that visually represent the calculated means. Apply built-in color palettes to make the plots visually appealing and informative.
-
-#Contributing
 Contributions to this project are welcome! If you have improvements, suggestions, or would like to contribute, please follow the contribution guidelines.
 
-#License
+License
 This project is licensed under the MIT License - see the LICENSE file for details.
 
 Feel free to clone, fork, or contribute to this repository to enhance our understanding of climate change and temperature trends.
