@@ -107,3 +107,27 @@ ggplot(humid_city, aes(x = reorder(City, -mean_other_temp), y = mean_other_temp)
 
 
 #-----------------------------------------------------------------------------------------------------------------------
+
+#devanmita
+
+# Load the required libraries
+library(dplyr)
+library(ggplot2)
+
+# Calculate the mean of 'windspeed' for each 'City', sort in descending order, and reset the index
+city_windspeed <- data %>%
+  group_by(City) %>%
+  summarize(windspeed_mean = mean(windspeed, na.rm = TRUE)) %>%
+  arrange(desc(windspeed_mean)) %>%
+  ungroup()
+
+# Print the resulting data frame
+print(city_windspeed)
+
+
+# Create a bar graph for the mean wind speed by city
+ggplot(city_windspeed, aes(x = City, y = windspeed_mean)) +
+  geom_bar(stat = "identity", fill = "skyblue") +
+  labs(x = "City", y = "Mean Wind Speed", title = "Mean Wind Speed by City (Bar Graph)") +
+  theme_minimal() +
+  theme(axis.text.x = element_text(angle = 45, hjust = 1))  # Rotate x-axis labels for better readability
