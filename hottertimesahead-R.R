@@ -93,11 +93,14 @@ humid_city <- data %>%
   summarise(mean_other_temp = mean(other_temp)) %>%
   arrange(desc(mean_other_temp))
 
-ggplot(humid_city, aes(x = reorder(City, -mean_other_temp), y = mean_other_temp)) +
-  geom_bar(stat = "identity", fill = "skyblue") +
-  labs(x = "City", y = "Mean Other Temperature") +
+ggplot(humid_city, aes(x = "", y = mean_other_temp, fill = City)) +
+  geom_bar(stat = "identity", width = 1) +
+  coord_polar("y") +
+  labs(title = "Mean Other Temperature by City (Pie Chart)") +
   theme_minimal() +
-  theme(axis.text.x = element_text(angle = 90, hjust = 1))
+  theme(axis.text.x = element_blank())
+
+
 
 #explaination
 #other_temp is calculated by subtracting the 'tempmax' column from the 'feelslikemax' column. It represents the difference between the actual maximum temperature ('tempmax') 
@@ -125,9 +128,11 @@ city_windspeed <- data %>%
 print(city_windspeed)
 
 
-# Create a bar graph for the mean wind speed by city
-ggplot(city_windspeed, aes(x = City, y = windspeed_mean)) +
-  geom_bar(stat = "identity", fill = "skyblue") +
-  labs(x = "City", y = "Mean Wind Speed", title = "Mean Wind Speed by City (Bar Graph)") +
+
+# Create a line graph for the mean wind speed by city
+ggplot(city_windspeed, aes(x = City, y = windspeed_mean, group = 1)) +
+  geom_line(color = "skyblue") +
+  geom_point(color = "skyblue") +
+  labs(x = "City", y = "Mean Wind Speed", title = "Mean Wind Speed by City (Line Graph)") +
   theme_minimal() +
-  theme(axis.text.x = element_text(angle = 45, hjust = 1))  # Rotate x-axis labels for better readability
+  theme(axis.text.x = element_text(angle = 45, hjust = 1))
